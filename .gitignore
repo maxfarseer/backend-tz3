@@ -1,0 +1,8 @@
+*.egg-info
+*.pot
+*.py[co]
+.tox/
+yarn-error.log
+backend/node_modules/
+.DS_Store
+dist

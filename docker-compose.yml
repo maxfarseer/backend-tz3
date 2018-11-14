@@ -1,0 +1,21 @@
+version: '2'
+services:
+  mongo:
+    build: ./mongo/
+    ports:
+      - "27017:27017"
+  swagger:
+    build: ./swagger/
+    ports:
+      - "80:8080"
+    environment:
+      - SWAGGER_JSON=/usr/share/swagger.json
+  backend:
+    build: ./backend/
+    ports:
+      - "5000:5000"
+      - "4333:4333"
+    depends_on:
+      - mongo
+    environment:
+      - DB_HOST=mongo

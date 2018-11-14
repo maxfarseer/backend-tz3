@@ -1,0 +1,10 @@
+*.egg-info
+*.pot
+*.py[co]
+.tox/
+yarn-error.log
+backend/node_modules/
+frontend/node_modules/
+.DS_Store
+dist
+.vscode
