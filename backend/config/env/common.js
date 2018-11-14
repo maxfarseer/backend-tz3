@@ -4,7 +4,6 @@ const port = process.env.PORT || 5000;
 export default {
   port,
   host,
-  // jwt token
   token: "secret-jwt-token",
   database: {
     host: process.env.DB_HOST || "localhost",
@@ -20,13 +19,12 @@ export default {
       }
     }
   },
-  // List of modules enabled in app, loaded from src/modules
   modules: ["users", "auth", "feeds"],
   recaptcha: {
     siteSecret: "6LecGmEUAAAAADXvFDUrR5OEVOgpJs7Nin9MxhO1"
   },
   google: {
     clientID:
-      "197441299861-7f1p4sh7drtbg46bk5s1i8sgvnbm1ovd.apps.googleusercontent.com"
+      "247120247682-tvla5t1r1q4895mi0tgde9rafllqjjn7.apps.googleusercontent.com"
   }
 };
