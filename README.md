@@ -7,7 +7,7 @@
 ## Предварительная настройка
 1. Для начала склонируйте этот репозиторий:
   ```
-  $ git clone https://github.com/maxfarseer/backend-tz3.git
+  git clone https://github.com/maxfarseer/backend-tz3.git
   ```
 2. В настройках проекта вам нужно указать свой client ID для авторизации через Google. Как создать свой ClientID подробно описано [здесь](https://maxpfrontend.ru/vebinary/avtorizatsiya-s-pomoschyu-google-sign-in/). Созданный ClientID нужно будет указать в файле `backend/config/env/common.js`. Этот же ClientID вам нужно будет использовать на фронтенде.
 
@@ -27,7 +27,7 @@ google: {
 1. [Скачайте и установите Docker](https://store.docker.com/).
 2. После запуска (подождите, пока иконка докера будет статичной), чтобы убедиться, что Docker установлен и запущен, в командой строке введите:
    ```
-   $ docker info
+   docker info
    ```
    Примерный вывод команды:
    ```
@@ -48,8 +48,8 @@ google: {
    Это значит, что Docker установлен и работает в штатном режиме.
 3. Перейдите в директорию проекта и запустите бэкенд:
    ```
-   $ cd backend-tz3 (или название вашей директории, куда вы скачали репозиторий)
-   $ docker-compose up
+   cd backend-tz3 (или название вашей директории, куда вы скачали репозиторий)
+   docker-compose up
    ```
    Выполнение команды может занять некоторое время - Docker выкачает необходимые образы и установит все зависимости для проекта. Когда приложение запустится, вы увидите в консоли следующее:
 
@@ -70,8 +70,8 @@ google: {
    > Важно, чтобы база данных была запущена в первую очередь.
 2. Запустите бэкенд:
     ```
-    $ npm install
-    $ npm run start
+    npm install
+    npm run start
     ```
 3. Запустите Swagger UI. Как это сделать описано [в документации](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/installation.md).
 
