@@ -25,7 +25,10 @@ export async function create(ctx) {
 }
 
 export async function get(ctx) {
-  const entities = await Feed.find();
+  const entities = await Feed.find().populate({
+    path: "creator",
+    select: "displayName"
+  });
   ctx.body = {
     feeds: entities
   };
