@@ -14,7 +14,7 @@ export async function create(ctx) {
 
   const entityFields = {
     ...params,
-    creator: user.populate({ path: "creator", select: "displayName" })
+    creator: user._id
   };
 
   const entity = new Feed(entityFields);
