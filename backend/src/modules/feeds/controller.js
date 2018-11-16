@@ -14,7 +14,7 @@ export async function create(ctx) {
 
   const entityFields = {
     ...params,
-    creator: user._id
+    creator: user.populate({ path: "creator", select: "displayName" })
   };
 
   const entity = new Feed(entityFields);
@@ -41,7 +41,10 @@ export async function getOne(ctx, next) {
     ctx.throw(400, "Bad news item ID");
   }
 
-  const entity = await Feed.findById(id);
+  const entity = await Feed.findById(id).populate({
+    path: "creator",
+    select: "displayName"
+  });
 
   if (!entity) {
     ctx.throw(404, "News item not found");
