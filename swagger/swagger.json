@@ -509,7 +509,15 @@
           "type": "string"
         },
         "creator": {
-          "type": "string"
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "displayName": {
+              "type": "string"
+            }
+          }
         },
         "__v": {
           "type": "number"
