@@ -20,7 +20,10 @@ export async function create(ctx) {
   const entity = new Feed(entityFields);
   await entity.save();
   ctx.body = {
-    feed: entity
+    feed: await Feed.populate(entity, {
+      path: "creator",
+      select: "displayName"
+    })
   };
 }
 
