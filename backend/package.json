@@ -39,7 +39,6 @@
     "koa-multer": "^1.0.2",
     "koa-passport": "^2.0.1",
     "koa-router": "^7.0.1",
-    "lodash.merge": "^4.6.1",
     "mongoose": "^4.4.3",
     "nodemon": "^1.11.0",
     "passport-local": "^1.0.0",
